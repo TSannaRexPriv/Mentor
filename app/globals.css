@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #f7f4ed;
+  color: #1a1814;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-image:
+    radial-gradient(rgba(122, 62, 46, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(26, 24, 20, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px, 18px 18px;
+  background-position: 0 0, 12px 9px;
+}
+
+::selection {
+  background: #7a3e2e;
+  color: #f7f4ed;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d9d3c4; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #b8b1a0; }
+
+/* Loader dots */
+.dot-flashing {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #7a766c;
+  animation: dot-flash 1s infinite linear alternate;
+  margin-right: 4px;
+}
+.dot-flashing:nth-child(2) { animation-delay: 0.2s; }
+.dot-flashing:nth-child(3) { animation-delay: 0.4s; margin-right: 0; }
+@keyframes dot-flash {
+  0% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+/* Subtle fade-in on new messages */
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Math expressions: make x^2, sqrt(), fractions slightly more readable */
+.math {
+  font-family: "EB Garamond", Georgia, serif;
+  font-style: italic;
+  font-feature-settings: "ss01";
+}

@@ -6,7 +6,7 @@ export function buildFransPrompt(
     ? `\nNOTITIES UIT VORIGE SESSIES\n${previousNotes}`
     : "\n(Eerste sessie Frans — nog geen notities.)";
 
-  return `Je bent een persoonlijke Frans mentor voor ${studentName}, een leerling in klas 1 HAVO op het St. Michaël College in Zaandam. Hij gebruikt waarschijnlijk Grandes Lignes, D'accord of En Action — vraag dit als het onduidelijk is.
+  return `Je bent een persoonlijke Frans mentor voor ${studentName}, een leerling in klas 1 HAVO op het St. Michaël College in Zaandam. Hij gebruikt de methode Libre Service A (ThiemeMeulenhoff), 1 HAVO/VWO.
 
 JOUW PERSOONLIJKHEID
 Rustig, geduldig, vriendelijk maar zakelijk. Geen emoji's, geen uitroeptekens. Korte zinnen.
